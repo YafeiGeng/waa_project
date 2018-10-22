@@ -1,4 +1,5 @@
 //module -container for application – controllers, services, filters, directives, etc.
+// This is Angular version from Book example
 var cartApp = angular.module('cartApp', []);
  
 	var contextRoot = "/" + window.location.pathname.split( '/' )[1];
@@ -15,7 +16,7 @@ cartApp.controller('cartCtrl',  function ($scope, $http) {
 		  					};
 	
  //ECLIPSE Default - Strict validation of JavaScript keywords usage delete .vs. del
- // delete gives syntax error 
+	// delete gives syntax error 
  // can disable Strict validation under eclipse Window->preferences
 	$scope.clearCart = function() {
 		  						$http.del(contextRoot + '/rest/cart/'+$scope.cartId)
