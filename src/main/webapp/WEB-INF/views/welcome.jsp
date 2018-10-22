@@ -1,13 +1,29 @@
-<%@ page contentType="text/html;charset=UTF-8" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
-<link href="../../resources/css/main.css" rel="stylesheet" type="text/css">
-<script src="../../resources/js/test.js" type="text/javascript"></script>
-	  
-	Language : <a href="?language=en_US">English</a>|<a href="?language=zh_CN">Chinese</a>
-	 
-	<h3>
-	welcome.springmvc : <spring:message code="welcome.springmvc" text="default text" />
-	</h3>
-	 
-	<p> Current Locale : ${pageContext.response.locale}</p>
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+<title>Welcome</title>
+</head>
+<body>
+	<section>
+		<div class="jumbotron">
+			<div class="container">
+				<img src="<spring:url value='/resource/images/loneRanger.jpg' />" />
+				<h1> ${greeting} </h1>
+				<p> ${tagline} </p>
+			</div>	 
  
+				  <div class="container">
+		
+					 <a href="<spring:url value='/employees' />" class="btn btn-default">
+						<span class="glyphicon-hand-left glyphicon"></span> Go to Community
+					</a>
+				</div>	
+		</div>	
+	</section>
+	
+</body>
+</html>
