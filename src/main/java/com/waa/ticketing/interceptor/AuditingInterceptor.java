@@ -14,6 +14,7 @@ public class AuditingInterceptor extends HandlerInterceptorAdapter {
 	private String user;
 	private String productId;
 
+	@Override
 	public boolean preHandle(HttpServletRequest request, HttpServletResponse arg1, Object handler) throws Exception {
 
 		if(request.getRequestURI().endsWith("products/add") && request.getMethod().equals("POST")){
@@ -24,6 +25,7 @@ public class AuditingInterceptor extends HandlerInterceptorAdapter {
 	}
 
 
+	@Override
 	public void afterCompletion(HttpServletRequest request,	HttpServletResponse response, Object handler, Exception arg3) throws Exception {
 		if(request.getRequestURI().endsWith("products/add") && response.getStatus()==302){
 			logger.info(String.format("A New product[%s] Added by %s on %s", productId, user, getCurrentTime()));

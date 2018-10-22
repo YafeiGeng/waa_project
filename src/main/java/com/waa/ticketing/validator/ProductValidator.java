@@ -27,11 +27,13 @@ public class ProductValidator implements Validator{
 	}
 	
 	
+	@Override
 	public boolean supports(Class<?> clazz) {
         return Product.class.isAssignableFrom(clazz);  
 	}
 
 	
+	@Override
 	public void validate(Object target, Errors errors) {
 		Set<ConstraintViolation<Object>> constraintViolations = beanValidator.validate(target);
 		

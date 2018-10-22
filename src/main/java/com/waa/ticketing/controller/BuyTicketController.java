@@ -20,15 +20,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
-import org.springframework.web.servlet.ModelAndView;
 import com.waa.ticketing.domain.Product;
 import com.waa.ticketing.exception.NoProductsFoundUnderCategoryException;
 import com.waa.ticketing.exception.ProductNotFoundException;
 import com.waa.ticketing.service.ProductService;
 
 @Controller
-@RequestMapping("/products")
-public class ProductController {
+@RequestMapping("/buyTicket")
+public class BuyTicketController {
 	
 	@Autowired
 	private ProductService productService;
@@ -46,18 +45,9 @@ public class ProductController {
 		Locale locale = LocaleContextHolder.getLocale();
 		System.out.printf("WELCOME AGAIN %s in %s\n","Kemosabe!",locale.getDisplayLanguage());
 
-		return "products";
+		return "buyTicket";
 	}
-	
-	@RequestMapping("/all")
-	public ModelAndView allProducts() {
-		ModelAndView modelAndView = new ModelAndView();
 		
-		modelAndView.addObject("products", productService.getAllProducts());
-		modelAndView.setViewName("products");
-		return modelAndView;
-	}
-	
 	@RequestMapping("/{category}")
 	public String getProductsByCategory(Model model, @PathVariable("category") String category) {
 		List<Product> products = productService.getProductsByCategory(category);

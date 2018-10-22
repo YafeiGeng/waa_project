@@ -10,9 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.waa.ticketing.domain.Cart;
-import com.waa.ticketing.domain.Product;
 import com.waa.ticketing.service.CartService;
-import com.waa.ticketing.service.ProductService;
 
 
 @Controller

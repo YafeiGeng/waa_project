@@ -4,7 +4,6 @@ import java.math.BigDecimal;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
@@ -14,7 +13,6 @@ import org.springframework.stereotype.Repository;
 
 import com.waa.ticketing.domain.Product;
 import com.waa.ticketing.domain.repository.ProductRepository;
-import com.waa.ticketing.exception.ProductNotFoundException;
 
 @Repository
 public class InMemoryProductRepository implements ProductRepository{
@@ -61,10 +59,12 @@ public class InMemoryProductRepository implements ProductRepository{
 
 	}
 
+	@Override
 	public List<Product> getAllProducts() {
 		return listOfProducts;
 	}
 
+	@Override
 	public Product getProductById(String productId) {
 		Product productById = null;
 		
@@ -82,6 +82,7 @@ public class InMemoryProductRepository implements ProductRepository{
 		return productById;
 	}
 	
+	@Override
 	public List<Product> getProductsByCategory(String category) {
 		List<Product> productsByCategory = new ArrayList<Product>();
 			
@@ -94,6 +95,7 @@ public class InMemoryProductRepository implements ProductRepository{
 		return productsByCategory;
 	}
 
+	@Override
 	public Set<Product> getProductsByFilter(Map<String, List<String>> filterParams) {
 		Set<Product> productsByBrand = new HashSet<Product>();
 		Set<Product> productsByCategory = new HashSet<Product>();
@@ -121,6 +123,7 @@ public class InMemoryProductRepository implements ProductRepository{
 		return productsByCategory;
 	}
 	
+	@Override
 	public void addProduct(Product product) {
 		   listOfProducts.add(product);
 	}

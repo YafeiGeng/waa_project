@@ -1,4 +1,4 @@
-<%@ page contentType="text/html;charset=UTF-8" %>
+<%@ page contentType="text/html;charset=UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <%@ taglib prefix="tiles" uri="http://tiles.apache.org/tags-tiles"%>
@@ -12,10 +12,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title><tiles:insertAttribute name="title" /></title>
-
-<link href="http://getbootstrap.com/dist/css/bootstrap.css"	rel="stylesheet">
-
-<link href="http://getbootstrap.com/examples/jumbotron/jumbotron.css"	rel="stylesheet">
+<link href="/resources/css/main.css" rel="stylesheet" type="text/css">
+<script src="/resources/js/test.js" type="text/javascript"></script>
 
 </head>
 

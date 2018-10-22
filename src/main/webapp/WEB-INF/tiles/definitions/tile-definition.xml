@@ -40,6 +40,14 @@
 		<put-attribute name="body" value="/WEB-INF/views/addProduct.jsp" />
 	</definition>
 	
+	<!-- Buying ticket jsp -->
+	<definition name="buyTicket" extends="baseLayout">
+		<put-attribute name="title" value="Buy ticket" />
+		<put-attribute name="heading" value="Buy tickets" />
+		<put-attribute name="tagline" value="buyticket" />
+		<put-attribute name="body" value="/WEB-INF/views/buyTicket.jsp" />
+	</definition>
+	
 	<definition name="login" extends="baseLayout">
 		<put-attribute name="title" value="Login" />
 		<put-attribute name="heading" value="Login" />

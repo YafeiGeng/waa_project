@@ -1,8 +1,5 @@
 package com.waa.ticketing.exception;
 
-import org.springframework.http.HttpStatus;
-import org.springframework.web.bind.annotation.ResponseStatus;
-
 //Either activate @ResponseStatus OR "activate method in @ControllerAdvice
 //@ResponseStatus(value=HttpStatus.NOT_FOUND, reason="No products found under this category")
 public class NoProductsFoundUnderCategoryException extends RuntimeException{

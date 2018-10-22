@@ -11,10 +11,12 @@ import com.waa.ticketing.domain.Product;
 @Component
 public class UnitsInStockValidator implements Validator{
 
+	@Override
 	public boolean supports(Class<?> clazz) {
         return Product.class.isAssignableFrom(clazz);  
 	}
 
+	@Override
 	public void validate(Object target, Errors errors) {
 		Product product = (Product) target;
 
