@@ -11,15 +11,14 @@
 	<section>
 		<div class="jumbotron">
 			<div class="container">
-				<img src="<spring:url value='/resource/images/loneRanger.jpg' />" />
 				<h1> ${greeting} </h1>
 				<p> ${tagline} </p>
 			</div>	 
  
 				  <div class="container">
 		
-					 <a href="<spring:url value='/employees' />" class="btn btn-default">
-						<span class="glyphicon-hand-left glyphicon"></span> Go to Community
+					 <a href="<spring:url value='/products' />" class="btn btn-default">
+						<span class="glyphicon-hand-left glyphicon"></span> Go To Products
 					</a>
 				</div>	
 		</div>	
