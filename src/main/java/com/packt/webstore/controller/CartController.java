@@ -1,33 +1,28 @@
 package com.packt.webstore.controller;
 
-import javax.servlet.http.HttpServletRequest;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-
 import com.packt.webstore.domain.Cart;
-import com.packt.webstore.domain.Product;
 import com.packt.webstore.service.CartService;
-import com.packt.webstore.service.ProductService;
+
 
 
 @Controller
-@RequestMapping(value = "/cart")
 public class CartController {
 
 	@Autowired
 	private CartService cartService;
 
-	@RequestMapping
-	public String get(HttpServletRequest request) {
-		return "redirect:/cart/"+request.getSession(true).getId();
+	@RequestMapping(value = "/ticket", method = RequestMethod.GET)
+	public String get(Model model) {
+		return "cart";
 	}
 	
-	@RequestMapping(value = "/{cartId}", method = RequestMethod.GET)
+	@RequestMapping(value = "/{cartId}", method = RequestMethod.POST)
 	public String getCart(@PathVariable(value = "cartId") String cartId, Model model) {
 		model.addAttribute("cartId",cartId);
 		Cart cart = cartService.read(cartId);
