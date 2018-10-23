@@ -1,0 +1,29 @@
+ul.list-movies li {
+	float: left;
+	min-height: 200px;
+	width: 280px;
+	padding: 0 10px 0 0;
+}
+
+ul.list-movies li img {
+	float: left;
+	-moz-box-shadow: 4px 4px 2px 2px #333;
+	-webkit-box-shadow: 4px 4px 2px 2px #333;
+	box-shadow: 4px 4px 2px 2px #665b45;
+}
+
+ul.list-movies li .desc {
+	width: 165px;
+	float: right;
+}
+
+ul.list-movies li h3 {
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+ul.list-movies li span {
+	font-size: 12px;
+	display: block;
+	text-transform: uppercase;
+}

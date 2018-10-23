@@ -27,8 +27,8 @@ public class Customer {
 	private String eyeColor;
 	
 	@OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
-	@JoinColumn(name="customerId")
-	private List<Product> productList = new ArrayList<Product>();
+//	@JoinColumn(name="customerId")
+//	private List<Movie> productList = new ArrayList<Movie>();
 	
 	public long getId() {
 		return id;
@@ -60,12 +60,12 @@ public class Customer {
 	public void setEyeColor(String eyeColor) {
 		this.eyeColor = eyeColor;
 	}
-	public List<Product> getProductList() {
-		return productList;
-	}
-	public void setProductList(List<Product> productList) {
-		this.productList = productList;
-	}
+//	public List<Movie> getProductList() {
+//		return productList;
+//	}
+//	public void setProductList(List<Movie> productList) {
+//		this.productList = productList;
+//	}
 	
 
 }

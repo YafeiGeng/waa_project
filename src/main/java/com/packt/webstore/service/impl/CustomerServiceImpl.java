@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.packt.webstore.domain.Customer;
-import com.packt.webstore.domain.Product;
+import com.packt.webstore.domain.Movie;
 import com.packt.webstore.repository.CustomerRepository;
 import com.packt.webstore.service.CustomerService;
 

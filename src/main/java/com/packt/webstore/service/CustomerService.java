@@ -7,7 +7,7 @@ import java.util.Set;
 import org.springframework.data.repository.query.Param;
 
 import com.packt.webstore.domain.Customer;
-import com.packt.webstore.domain.Product;
+import com.packt.webstore.domain.Movie;
 
 public interface CustomerService {
 

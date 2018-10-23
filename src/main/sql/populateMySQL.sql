@@ -1,8 +1,7 @@
-INSERT INTO `PRODUCT` VALUES (NULL,'PC', 'New', 'Dell Inspiron 14-inch Laptop (Black) with 3rd Generation Intel Core processors',FALSE,'Dell','Dell Inspiron', 'P1235',100,1000,1000,NULL);
+INSERT INTO `MOVIE` VALUES (NULL,'An animated adventure for all ages, with original music and an all-star cast', 'John', 'Action','P1235','SmallFoot', 8, 95);
 				
 				
-INSERT INTO `PRODUCT` VALUES (NULL,'Smart Phone','New','Apple iPhone 5s smartphone with 4.00-inch 640x1136 display and 8-megapixel rear camera',FALSE,'Apple','iPhone 5s', 'P1234',400,	500,500,NULL);
-		
-		
-INSERT INTO `PRODUCT` VALUES (NULL,'Tablet','New','Google Nexus 7 is the lightest 7 inch tablet With a quad-core Qualcomm Snapdragon™ S4 Pro processor',FALSE,'Google','Nexus 7','P1236', 500,250,250,NULL);
-				
+INSERT INTO `MOVIE` VALUES (NULL,'An animated adventure for all ages, with original music and an all-star cast', 'John2', 'Action2','P1236','SmallFoot2', 8, 98);
+
+
+INSERT INTO `MOVIE` VALUES (NULL,'An animated adventure for all ages, with original music and an all-star cast', 'John3', 'Action3','P1238','SmallFoot3', 8, 100);

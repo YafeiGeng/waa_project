@@ -4,7 +4,7 @@ import java.math.BigDecimal;
 
 public class CartItem {
 
-	private Product product;
+	private Movie product;
 	private int quantity;
 	private BigDecimal totalPrice;
 	
@@ -12,18 +12,18 @@ public class CartItem {
 		// TODO Auto-generated constructor stub
 	}
 	
-	public CartItem(Product product) {
+	public CartItem(Movie product) {
 		super();
 		this.product = product;
 		this.quantity = 1;
-		this.totalPrice = product.getUnitPrice();
+		this.totalPrice = product.getPrice();
 	}
 	
-	public Product getProduct() {
+	public Movie getProduct() {
 		return product;
 	}
 	
-	public void setProduct(Product product) {
+	public void setProduct(Movie product) {
 		this.product = product;
 		this.updateTotalPrice();
 	}
@@ -42,7 +42,7 @@ public class CartItem {
 	}
 
 	public void updateTotalPrice() {
-		totalPrice = this.product.getUnitPrice().multiply(new BigDecimal(this.quantity));
+		totalPrice = this.product.getPrice().multiply(new BigDecimal(this.quantity));
 	}
 	
 	@Override

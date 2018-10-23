@@ -4,7 +4,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-import com.packt.webstore.domain.Product;
+import com.packt.webstore.domain.Movie;
 
 /*
  * This is the webstore8 implementation of the repository interface
@@ -12,13 +12,13 @@ import com.packt.webstore.domain.Product;
 
 public interface ProductRepositoryLite {
 
-	List <Product> getAllProducts();
+	List <Movie> getAllProducts();
 	
-	Product getProductById(String key);
+	Movie getProductById(String key);
 	
-	List<Product> getProductsByCategory(String category);
+	List<Movie> getProductsByCategory(String category);
 
-	Set<Product> getProductsByFilter(Map<String, List<String>> filterParams);
+	Set<Movie> getProductsByFilter(Map<String, List<String>> filterParams);
 	
-	void addProduct(Product product);		
+	void addProduct(Movie product);		
 }

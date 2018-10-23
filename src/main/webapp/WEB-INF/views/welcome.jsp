@@ -17,8 +17,8 @@
  
 				  <div class="container">
 		
-					 <a href="<spring:url value='/products' />" class="btn btn-default">
-						<span class="glyphicon-hand-left glyphicon"></span> Go To Products
+					 <a href="<spring:url value='/movies' />" class="btn btn-default">
+						<span class="glyphicon-hand-left glyphicon"></span> Go To Movies
 					</a>
 				</div>	
 		</div>	

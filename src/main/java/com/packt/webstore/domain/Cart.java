@@ -41,7 +41,7 @@ public class Cart {
 	}
 	
 	public void addCartItem(CartItem item) {
-		String productId = item.getProduct().getProductId();
+		String productId = item.getProduct().getMovieId();
 		
 		if(cartItems.containsKey(productId)) {
 			CartItem existingCartItem = cartItems.get(productId);
@@ -54,7 +54,7 @@ public class Cart {
 	}
 	
 	public void removeCartItem(CartItem item) {
-		String productId = item.getProduct().getProductId();
+		String productId = item.getProduct().getMovieId();
 		cartItems.remove(productId);
 		updateGrandTotal();
 	}

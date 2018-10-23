@@ -14,10 +14,10 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import com.packt.webstore.domain.Cart;
 import com.packt.webstore.domain.CartItem;
-import com.packt.webstore.domain.Product;
+import com.packt.webstore.domain.Movie;
 import com.packt.webstore.exception.ProductNotFoundException;
 import com.packt.webstore.service.CartService;
-import com.packt.webstore.service.ProductService;
+import com.packt.webstore.service.MovieService;
 
 @Controller
 @RequestMapping(value = "rest/cart")
@@ -27,7 +27,7 @@ public class CartRestController {
 	private CartService cartService;
 	
 	@Autowired
-	private ProductService productService;
+	private MovieService productService;
 	
 	@RequestMapping(method = RequestMethod.POST)
 	public @ResponseBody Cart create(@RequestBody Cart cart) {
@@ -61,7 +61,7 @@ public class CartRestController {
 			cart = cartService.create(new Cart(sessionId));
 		}
 		
-		Product product = productService.getProductById(productId);
+		Movie product = productService.getMovieById(productId);
 		if(product == null) {
 			throw new IllegalArgumentException(new ProductNotFoundException(productId, sessionId));
 		}
@@ -81,7 +81,7 @@ public class CartRestController {
 			cart = cartService.create(new Cart(sessionId));
 		}
 		
-		Product product = productService.getProductById(productId);
+		Movie product = productService.getMovieById(productId);
 		if(product == null) {
 			throw new IllegalArgumentException(new ProductNotFoundException(productId, sessionId));
 		}
