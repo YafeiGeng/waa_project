@@ -7,7 +7,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name="time")
-public class Times {
+public class Time {
 	
 	@Id	
 	Long id;
