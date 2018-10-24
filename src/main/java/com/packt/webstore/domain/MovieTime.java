@@ -1,26 +1,22 @@
 package com.packt.webstore.domain;
 
-import javax.persistence.Column;
-
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="movie_time")
+@Table(name = "movie_time")
 public class MovieTime {
 
 	@Id
-	Long id;
-	
-	@Column(name="movie_time_id")
-	int movieTimeId;
-	
-	@Column(name="movie_id")
-	int movieId;
-	
-	@Column(name="time_id")
-	int timeId;
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private Long id;
+
+	private int movieId;
+
+	private String movieTime;
 
 	public Long getId() {
 		return id;
@@ -28,14 +24,6 @@ public class MovieTime {
 
 	public void setId(Long id) {
 		this.id = id;
-	}
-
-	public int getMovieTimeId() {
-		return movieTimeId;
-	}
-
-	public void setMovieTimeId(int movieTimeId) {
-		this.movieTimeId = movieTimeId;
 	}
 
 	public int getMovieId() {
@@ -46,13 +34,12 @@ public class MovieTime {
 		this.movieId = movieId;
 	}
 
-	public int getTimeId() {
-		return timeId;
+	public String getMovieTime() {
+		return movieTime;
 	}
 
-	public void setTimeId(int timeId) {
-		this.timeId = timeId;
+	public void setMovieTime(String movieTime) {
+		this.movieTime = movieTime;
 	}
-	
-	
+
 }
