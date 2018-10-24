@@ -13,7 +13,6 @@ public class SuccessController {
 		
 		model.addAttribute("greeting", "Payment has done successfully");
 		model.addAttribute("tagline", "Thank you");
-
 		
 		return "success";
 	}	

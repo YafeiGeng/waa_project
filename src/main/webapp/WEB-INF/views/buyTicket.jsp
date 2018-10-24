@@ -15,7 +15,7 @@
  
 				  <div class="container">			
 					
-					<form:form modelAttribute="reservation" class="form-horizontal"
+			<form:form modelAttribute="reservation" class="form-horizontal"
 			enctype="multipart/form-data">
 			<fieldset>
 				<legend>Ticket information</legend>
@@ -57,7 +57,72 @@
 							<form:errors path="price" cssClass="text-danger" />
 						</div>
 					</div>
-				</div>			
+				</div>	
+				
+				<div class="context">
+		
+			<div class="screen">Central Screen</div>
+			
+			<div class="row">
+				<input type="checkbox" class="seat" /> 
+				<input type="checkbox" class="seat" /> 
+				<input type="checkbox" class="seat" /> 
+				<input type="checkbox" class="seat" /> 
+				<input type="checkbox" class="seat" />
+				<input type="checkbox" class="seat" /> 
+				<input type="checkbox" class="seat" /> 
+				<input type="checkbox" class="seat" /> 
+				<input type="checkbox" class="seat" />
+			</div>
+			<div class="row">
+				<input type="checkbox" class="seat" /> 
+				<input type="checkbox" class="seat" /> 
+				<input type="checkbox" class="seat" /> 
+				<input type="checkbox" class="seat" /> 
+				<input type="checkbox" class="seat" />
+				<input type="checkbox" class="seat" /> 
+				<input type="checkbox" class="seat" /> 
+				<input type="checkbox" class="seat" /> 
+				<input type="checkbox" class="seat" />
+			</div>
+			<div class="row">
+				<input type="checkbox" class="seat" /> 
+				<input type="checkbox" class="seat" /> 
+				<input type="checkbox" class="seat" /> 
+				<input type="checkbox" class="seat" /> 
+				<input type="checkbox" class="seat" />
+				<input type="checkbox" class="seat" /> 
+				<input type="checkbox" class="seat" /> 
+				<input type="checkbox" class="seat" /> 
+				<input type="checkbox" class="seat" />
+			</div>
+			<div class="row">
+				<input type="checkbox" class="seat" /> 
+				<input type="checkbox" class="seat" /> 
+				<input type="checkbox" class="seat" /> 
+				<input type="checkbox" class="seat" /> 
+				<input type="checkbox" class="seat" />
+				<input type="checkbox" class="seat" /> 
+				<input type="checkbox" class="seat" /> 
+				<input type="checkbox" class="seat" /> 
+				<input type="checkbox" class="seat" />
+			</div>
+			</div>
+			<div class="confirm-info">
+
+				<div class="room">
+					Name: <label for="reserverName"><form:input type="text" id="reserverName" path="reserverName"
+						placeholder="Enter your name"/></label>
+				</div>
+				<div class="room">
+					Email: <label for="email"><form:input type="text" id="email" path="email"
+						placeholder="xxxxx@gmail.com"/></label>
+				</div>
+				<div class="room">
+					Phone: <label for="phone"><form:input type="text" id="phone" path="phone"
+						placeholder="xxx-xxx-xxxx"/></label>
+				</div>
+			</div>
 
 				<div class="form-group">
 					<div class="col-lg-offset-2 col-lg-10">
@@ -67,6 +132,8 @@
 				</div>
 
 			</fieldset>
+			
+			
 		</form:form>
 				</div>	
 		</div>	

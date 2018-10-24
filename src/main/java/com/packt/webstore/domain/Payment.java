@@ -9,19 +9,23 @@ import javax.persistence.Id;
 
 @Entity(name = "PAYMENT")
 public class Payment {
-
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long id;
 
-	@Column(name = "RESERVATIONID")
+	@Column(name = "CARDNAME")
 	String cardName;
 
-	@Column(name = "STATUS")
+	@Column(name = "CARDNUMBER")
+	String cardNumber;
+	
+	@Column(name = "CVV")
+	String cvv;
+	
+	String paymentId;
+	
 	String status;
-
-	@Column(name = "PAYMENTID")
-	int paymentId;
 
 	public long getId() {
 		return id;
@@ -39,6 +43,30 @@ public class Payment {
 		this.cardName = cardName;
 	}
 
+	public String getCardNumber() {
+		return cardNumber;
+	}
+
+	public void setCardNumber(String cardNumber) {
+		this.cardNumber = cardNumber;
+	}
+
+	public String getCvv() {
+		return cvv;
+	}
+
+	public void setCvv(String cvv) {
+		this.cvv = cvv;
+	}
+
+	public String getPaymentId() {
+		return paymentId;
+	}
+
+	public void setPaymentId(String paymentId) {
+		this.paymentId = paymentId;
+	}
+
 	public String getStatus() {
 		return status;
 	}
@@ -46,15 +74,5 @@ public class Payment {
 	public void setStatus(String status) {
 		this.status = status;
 	}
-
-	public int getPaymentId() {
-		return paymentId;
-	}
-
-	public void setPaymentId(int paymentId) {
-		this.paymentId = paymentId;
-	}
-
-	
 
 }

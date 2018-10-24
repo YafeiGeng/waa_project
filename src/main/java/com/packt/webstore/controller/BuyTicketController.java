@@ -42,7 +42,7 @@ public class BuyTicketController {
 	public String addNewTicketToReservation(@ModelAttribute("reservation") Reservation reservation, BindingResult result,
 			HttpServletRequest request) {	
 		
-		return "chooseSeat";
+		return "success";
 	}
 
 }

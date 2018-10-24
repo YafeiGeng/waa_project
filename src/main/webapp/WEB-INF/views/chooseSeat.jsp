@@ -15,8 +15,6 @@
 
 </head>
 <body>
-	<form:form modelAttribute="reservation" class="form-horizontal" medthod="post"
-			enctype="multipart/form-data">
 	
 		<div class="context">
 		
@@ -66,7 +64,8 @@
 				<input type="checkbox" class="seat" /> 
 				<input type="checkbox" class="seat" />
 			</div>
-
+<form:form modelAttribute="reservation" class="form-horizontal" medthod="post" action="/movie/ticket/chooseSeat"
+			enctype="multipart/form-data">
 			<div class="confirm-info">
 
 				<div class="room">
@@ -82,16 +81,16 @@
 						placeholder="xxx-xxx-xxxx"/></label>
 				</div>
 			</div>
-			<div class="col-md-6">
-			<span> <a href=" <spring:url value="/movie/ticket/dopayment" /> "
-				class="btn btn-primary"> <span
-					class="glyphicon-info-sign glyphicon" /></span> Do payment
-			</a>
-			</span>
-		</div>
+			<div class="form-group">
+					<div class="col-lg-offset-2 col-lg-10">
+						<input type="submit" id="btnDoPayment" class="btn btn-primary"
+							value="Confirm" />
+					</div>
+				</div>
+		</form:form>
 		</div>
 		
-	</form:form>
+	
 </body>
 
 </html>
