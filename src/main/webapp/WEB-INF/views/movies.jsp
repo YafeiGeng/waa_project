@@ -27,6 +27,13 @@ resource
 	</section>
 
 	<section class="container">
+		<div class="row text-right">
+			<a href=" <spring:url value="/movies/add" /> "
+				class="btn btn-primary"> <span
+				class="glyphicon-info-sign glyphicon" /></span> Add
+			</a>
+		</div>
+		<br/>
 		<div class="row">
 			<c:forEach items="${movies}" var="movie">
 				<div class="col-sm-6 col-md-3" style="padding-bottom: 15px">
