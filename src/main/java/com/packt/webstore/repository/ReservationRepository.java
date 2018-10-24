@@ -11,7 +11,7 @@ import com.packt.webstore.domain.Reservation;
 
 @Repository
 public interface ReservationRepository extends CrudRepository<Reservation, Long>, JpaSpecificationExecutor<Reservation> {
-	Reservation getReservationByReservationId(String key);
+
 
 	// findAll comes with repository
 	@Query("SELECT r FROM RESERVATION r")

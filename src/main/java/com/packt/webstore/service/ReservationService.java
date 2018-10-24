@@ -10,7 +10,7 @@ public interface ReservationService {
 	
 	List<Reservation> getAllReservations();
 
-	Reservation getReservationById(String reservationID);
+	//Reservation getReservationById(String reservationID);
 
 	List<Reservation> getProductsByCategory(String category);
 
@@ -20,7 +20,7 @@ public interface ReservationService {
 
 	Reservation get(long id);
 
-	public Reservation getAddReservation(String desc);
+	//public Reservation getAddReservation(String desc);
 
-	List<Reservation> getReservationsByDescOrder();
+	//List<Reservation> getReservationsByDescOrder();
 }

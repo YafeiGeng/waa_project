@@ -23,12 +23,12 @@ public class ReservationServiceImpl implements ReservationService {
 	public List<Reservation> getAllReservations() {
 		return reservationRepository.getAllReservations();
 	}
-
+/*
 	@Override
 	public Reservation getReservationById(String ReservationID) {
 		return reservationRepository.getReservationByReservationId(ReservationID);
 	}
-
+*/
 	@Override
 	public List<Reservation> getProductsByCategory(String category) {
 		return null;
@@ -52,12 +52,12 @@ public class ReservationServiceImpl implements ReservationService {
 		return reservationRepository.findOne(productID);
 	}
 
-	@Override
+	/*@Override
 	public List<Reservation> getReservationsByDescOrder() {
 		return null;
 //		ReservationRepository.getProductsByDescOrder();
-	}
-
+	}*/
+/*
 	// Cache in play because fetches are in same session
 	@Override
 	public Reservation getAddReservation(String desc) {
@@ -67,6 +67,6 @@ public class ReservationServiceImpl implements ReservationService {
 		addReservation(p);
 		return p;
 
-	}
+	}*/
 
 }

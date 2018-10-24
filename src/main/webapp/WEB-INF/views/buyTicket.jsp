@@ -39,7 +39,7 @@
 							code="addMovie.form.price.label" /></label>
 					<div class="col-lg-10">
 						<div class="form:input-prepend">
-							<form:input id="numberOfTickets" path="numberOfTickets" type="text"
+							<form:input id="numberOfTickets" path="numberOfTickets" type="number"
 								class="form:input-large" />
 							<form:errors path="numberOfTickets" cssClass="text-danger" />
 						</div>
@@ -61,8 +61,8 @@
 
 				<div class="form-group">
 					<div class="col-lg-offset-2 col-lg-10">
-						<input type="submit" id="btnAdd" class="btn btn-primary"
-							value="Add" />
+						<input type="submit" id="btnConfirm" class="btn btn-primary"
+							value="Confirm" />
 					</div>
 				</div>
 

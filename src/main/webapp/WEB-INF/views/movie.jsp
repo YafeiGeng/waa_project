@@ -68,7 +68,7 @@ resource
 				</div>
 			</div>
 			<div class="col-md-6">
-				<span> <a href=" <spring:url value="/movie/ticket?id=${movie.movieId}" /> "
+				<span> <a href=" <spring:url value="/movie/ticket?movieid=${movie.movieId}" /> "
 					class="btn btn-primary"> <span
 						class="glyphicon-info-sign glyphicon" /></span> Take a ticket
 				</a>
