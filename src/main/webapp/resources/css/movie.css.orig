@@ -28,6 +28,7 @@ ul.list-movies li span {
 	text-transform: uppercase;
 }
 
+<<<<<<< HEAD
 * {
 	box-sizing: border-box;
 }
@@ -81,3 +82,5 @@ ul.list-movies li span {
 	margin: 0 -15px;
 	overflow: auto;
 }
+=======
+>>>>>>> 80f26843cb3088b8800daa6900e750a50153f1e4

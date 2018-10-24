@@ -24,15 +24,15 @@ public class Movie {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long id;
 
-	@Pattern(regexp = "P[1-9]+", message = "{Pattern.Product.productId.validation}")
+	@Pattern(regexp = "M[1-9]+", message = "{Pattern.Movie.movieId.validation}")
 	@Column(name = "MOVIEID")
 	private String movieId;
 
-	@Size(min = 4, max = 50, message = "{Size.Product.name.validation}")
+	@Size(min = 4, max = 50, message = "{Size.Movie.movieName.validation}")
 	private String movieName;
 
-	@Min(value = 0, message = "{Min.Product.unitPrice.validation}")
-	@Digits(integer = 8, fraction = 2, message = "{Digits.Product.unitPrice.validation}")
+	@Min(value = 0, message = "{Min.Movie.price.validation}")
+	@Digits(integer = 8, fraction = 2, message = "{Digits.Movie.price.validation}")
 	@Column(name = "PRICE")
 	private BigDecimal price;
 	private String description;
@@ -55,12 +55,12 @@ public class Movie {
 	}
 
 	@XmlTransient
-	public MultipartFile getProductImage() {
+	public MultipartFile getMovieImage() {
 		return movieImage;
 	}
 
-	public void setProductImage(MultipartFile productImage) {
-		this.movieImage = productImage;
+	public void setMovieImage(MultipartFile movieImage) {
+		this.movieImage = movieImage;
 	}
 
 	@Override
@@ -156,4 +156,5 @@ public class Movie {
 	public void setPrice(BigDecimal price) {
 		this.price = price;
 	}
+
 }
