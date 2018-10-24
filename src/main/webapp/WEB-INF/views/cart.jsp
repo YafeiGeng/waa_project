@@ -32,21 +32,21 @@
 				</td>
 			</tr>
 			<tr>
-				<td><label for="number">
+				<td><label for="timeId">
 				<spring:message code="buyTicket.ticket.number"/></label></td>
 				<td>				
-					<form:input id="number" path="number" type="number" class="form:input-large"/>
-					<form:errors path="time" cssClass="text-danger"/>
+					<form:input id="timeId" path="timeId" type="number" class="form:input-large"/>
+					<form:errors path="timeId" cssClass="text-danger"/>
 				</td>
 			</tr>
-			<tr>
+			<%-- <tr>
 				<td><label for="price">
 				<spring:message code="buyTicket.ticket.price"/></label></td>
 				<td>				
 					<form:input id="price" path="price" type="text" class="form:input-large"/>
 					<form:errors path="price" cssClass="text-danger"/>
 				</td>
-			</tr>		
+			</tr>		 --%>
 		</table>
 			
 			<a href="<spring:url value="/seat" />" class="btn btn-default">
