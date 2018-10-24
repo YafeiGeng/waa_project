@@ -2,45 +2,50 @@ package com.packt.webstore.domain;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.Table;
 
-@Entity
-@Table(name = "reservation")
+
+@Entity(name = "RESERVATION")
 public class Reservation {
-
+	
 	@Id
-	int id;
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private long id;
 
-	@Column(name = "reservation_id")
+	@Column(name = "RESERVATIONID")
 	int reservationId;
 
-	@Column(name = "movie_time_id")
-	int movieTimeId;
+	@Column(name = "MOVIEID")
+	int movieId;
+	
+	@Column(name = "TIME")
+	String time;
 
-	@Column(name = "booking_date")
+	@Column(name = "BOOKINGDATE")
 	String bookingDate;
 
-	@Column(name = "number_of_tickets")
+	@Column(name = "NUMBEROFTICKET")
 	int numberOfTickets;
 
-	@Column(name = "price")
+	@Column(name = "PRICE")
 	Double price;
 
-	@Column(name = "email")
+	@Column(name = "EMAIL")
 	String email;
 
-	@Column(name = "phone")
+	@Column(name = "PHONE")
 	String phone;
 
-	@Column(name = "reserver_name")
+	@Column(name = "RESERVERNAME")
 	String reserverName;
 
-	public int getId() {
+	public long getId() {
 		return id;
 	}
 
-	public void setId(int id) {
+	public void setId(long id) {
 		this.id = id;
 	}
 
@@ -52,12 +57,20 @@ public class Reservation {
 		this.reservationId = reservationId;
 	}
 
-	public int getMovieTimeId() {
-		return movieTimeId;
+	public int getMovieId() {
+		return movieId;
 	}
 
-	public void setMovieTimeId(int movieTimeId) {
-		this.movieTimeId = movieTimeId;
+	public void setMovieId(int movieId) {
+		this.movieId = movieId;
+	}
+
+	public String getTime() {
+		return time;
+	}
+
+	public void setTime(String time) {
+		this.time = time;
 	}
 
 	public String getBookingDate() {
@@ -107,5 +120,7 @@ public class Reservation {
 	public void setReserverName(String reserverName) {
 		this.reserverName = reserverName;
 	}
+
+	
 
 }

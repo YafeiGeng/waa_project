@@ -1,32 +1,33 @@
 package com.packt.webstore.domain;
 
 import javax.persistence.Column;
-
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.Table;
 
-@Entity
-@Table(name = "user")
+
+@Entity(name = "USER")
 public class User {
 
 	@Id
-	int id;
-
-	@Column(name = "user_name")
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private long id;
+	
+	@Column(name = "USERNAME")
 	String userName;
 
-	@Column(name = "password")
+	@Column(name = "PASSWORD")
 	String password;
 
-	@Column(name = "email")
+	@Column(name = "EMAIL")
 	String email;
 
-	public int getId() {
+	public long getId() {
 		return id;
 	}
 
-	public void setId(int id) {
+	public void setId(long id) {
 		this.id = id;
 	}
 

@@ -7,6 +7,6 @@ INSERT INTO `MOVIE` VALUES (NULL,'An animated adventure for all ages, with origi
 INSERT INTO `MOVIE` VALUES (NULL,'An animated adventure for all ages, with original music and an all-star cast', 'John3', 'Action3','P1238','SmallFoot3', 8, 100);
 
 
-insert into time( id,time_id,time) values(1,1,"15:00");
-insert into time( id,time_id,time) values(2,2,"17:00");
-insert into time( id,time_id,time) values(3,3,"19:00");
+INSERT INTO `TIME` VALUES(1,"15:00");
+INSERT INTO `TIME` VALUES(1,"17:00");
+INSERT INTO `TIME` VALUES(1,"19:00");

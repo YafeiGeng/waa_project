@@ -2,53 +2,33 @@ package com.packt.webstore.domain;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.Table;
 
-@Entity
-@Table(name = "payment")
+
+@Entity(name = "PAYMENT")
 public class Payment {
 
 	@Id
-	int id;
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private long id;
 
-	@Column(name = "reservation_id")
-	int reservationId;
-
-	@Column(name = "card_number")
-	String cardNumber;
-
-	@Column(name = "card_name")
+	@Column(name = "RESERVATIONID")
 	String cardName;
 
-	@Column(name = "status")
+	@Column(name = "STATUS")
 	String status;
 
-	@Column(name = "payment_id")
+	@Column(name = "PAYMENTID")
 	int paymentId;
 
-	public int getId() {
+	public long getId() {
 		return id;
 	}
 
-	public void setId(int id) {
+	public void setId(long id) {
 		this.id = id;
-	}
-
-	public int getReservationId() {
-		return reservationId;
-	}
-
-	public void setReservationId(int reservationId) {
-		this.reservationId = reservationId;
-	}
-
-	public String getCardNumber() {
-		return cardNumber;
-	}
-
-	public void setCardNumber(String cardNumber) {
-		this.cardNumber = cardNumber;
 	}
 
 	public String getCardName() {
@@ -74,5 +54,7 @@ public class Payment {
 	public void setPaymentId(int paymentId) {
 		this.paymentId = paymentId;
 	}
+
+	
 
 }

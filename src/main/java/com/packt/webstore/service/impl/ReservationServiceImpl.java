@@ -1,6 +1,9 @@
 package com.packt.webstore.service.impl;
 
 import java.util.List;
+import java.util.Map;
+import java.util.Set;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -20,10 +23,10 @@ public class ReservationServiceImpl implements ReservationService {
 	public List<Reservation> getAllReservations() {
 		return reservationRepository.getAllReservations();
 	}
-/*
+
 	@Override
 	public Reservation getReservationById(String ReservationID) {
-		return reservationRepository.getReservationById(ReservationID);
+		return reservationRepository.getReservationByReservationId(ReservationID);
 	}
 
 	@Override
@@ -65,6 +68,5 @@ public class ReservationServiceImpl implements ReservationService {
 		return p;
 
 	}
-*/
 
 }

@@ -1,12 +1,15 @@
 package com.packt.webstore.service;
 
 import java.util.List;
+import java.util.Map;
+import java.util.Set;
+
 import com.packt.webstore.domain.Reservation;
 
 public interface ReservationService {
 	
 	List<Reservation> getAllReservations();
-/*
+
 	Reservation getReservationById(String reservationID);
 
 	List<Reservation> getProductsByCategory(String category);
@@ -19,5 +22,5 @@ public interface ReservationService {
 
 	public Reservation getAddReservation(String desc);
 
-	List<Reservation> getReservationsByDescOrder();*/
+	List<Reservation> getReservationsByDescOrder();
 }
