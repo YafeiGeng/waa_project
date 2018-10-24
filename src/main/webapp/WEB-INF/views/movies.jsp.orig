@@ -19,12 +19,20 @@
 	</section>
 
 	<section class="container">
+<<<<<<< HEAD
+		<div class="row text-right">
+=======
 		<!-- <div class="row text-right">
+>>>>>>> maral
 			<a href=" <spring:url value="/movies/add" /> "
 				class="btn btn-primary"> <span
 				class="glyphicon-info-sign glyphicon" /></span> Add
 			</a>
+<<<<<<< HEAD
+		</div>
+=======
 		</div> -->
+>>>>>>> maral
 		<br/>
 		<div class="row">
 			<c:forEach items="${movies}" var="movie">
