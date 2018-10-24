@@ -17,7 +17,8 @@
 				<p>Add movies</p>
 			</div>
 			<div class="pull-right" style="padding-right: 50px">
-				<a href="?language=en">English</a>|<a href="?language=cn">Mongolian</a>
+				<li style="float: right"><a href="?language=mn_MN">Mongolia</a></li>
+				<li style="float: right"><a href="?language=en_US">English</a></li>
 			</div>
 
 		</div>
@@ -101,15 +102,6 @@
 							code="addMovie.form.movieImage.label" /></label>
 					<div class="col-lg-10">
 						<form:input id="movieImage" path="movieImage" type="file"
-							class="form:input-large" />
-					</div>
-				</div>
-
-				<div class="form-group">
-					<label class="control-label col-lg-2" for="movieTime"><spring:message
-							code="addMovie.form.movieTime.label" /></label>
-					<div class="col-lg-10">
-						<form:checkbox id="movieTime1" path="movieTime1"
 							class="form:input-large" />
 					</div>
 				</div>

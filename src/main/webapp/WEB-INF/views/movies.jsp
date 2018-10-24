@@ -7,14 +7,6 @@
 <link rel="stylesheet"
 	href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
 <title>Movies</title>
-<style type="text/css">
-@import
-url(
-"<c:url value="
-/
-resource
-/css/movie.css"/>");
-</style>
 </head>
 <body>
 	<section>
@@ -27,12 +19,12 @@ resource
 	</section>
 
 	<section class="container">
-		<div class="row text-right">
+		<!-- <div class="row text-right">
 			<a href=" <spring:url value="/movies/add" /> "
 				class="btn btn-primary"> <span
 				class="glyphicon-info-sign glyphicon" /></span> Add
 			</a>
-		</div>
+		</div> -->
 		<br/>
 		<div class="row">
 			<c:forEach items="${movies}" var="movie">
