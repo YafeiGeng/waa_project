@@ -1,0 +1,60 @@
+@charset "UTF-8";
+
+body {
+    margin: 0 auto;
+    text-align: center;
+    background: url("image/images.jpeg");
+}
+
+.context{
+    margin: auto;
+    width: 700px;
+    background-color: linen;
+    text-align: center;
+    border-radius: 25px;
+}
+
+.screen {
+    font-size: 50px;
+    font-family: Arial sans-serif;
+    margin-top: 40px;
+    margin-bottom: 50px;
+}
+
+.seat {
+    zoom: 300%;
+    border: solid thick black;
+    margin: 5px;
+    background-color: red;
+}
+
+.confirm-info {
+    font-family: Arial sans-serif;
+    font-size: 30px;
+}
+
+.room {
+    margin-bottom: 5px;
+}
+
+
+#name,#email,#phone{
+    height: 30px;
+    width: 250px;
+    margin-top: 10px;
+    font-family: Arial sans-serif;
+    font-size: 20px;
+    color: black;
+    border: black solid 1px;
+
+}
+
+#confirm {
+    width: 120px;
+    height: 40px;
+    font-size: 20px;
+    background-color: khaki;
+    border-radius: 25px;
+    border-color: black;
+    margin-top: 10px;
+}
