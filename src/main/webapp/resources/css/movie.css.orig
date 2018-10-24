@@ -1,0 +1,86 @@
+ul.list-movies li {
+	float: left;
+	min-height: 200px;
+	width: 280px;
+	padding: 0 10px 0 0;
+}
+
+ul.list-movies li img {
+	float: left;
+	-moz-box-shadow: 4px 4px 2px 2px #333;
+	-webkit-box-shadow: 4px 4px 2px 2px #333;
+	box-shadow: 4px 4px 2px 2px #665b45;
+}
+
+ul.list-movies li .desc {
+	width: 165px;
+	float: right;
+}
+
+ul.list-movies li h3 {
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+ul.list-movies li span {
+	font-size: 12px;
+	display: block;
+	text-transform: uppercase;
+}
+
+<<<<<<< HEAD
+* {
+	box-sizing: border-box;
+}
+
+[class^=col] {
+	float: left;
+	padding: 0 15px;
+}
+
+.col1 {
+	width: 10%;
+}
+
+.col2 {
+	width: 20%;
+}
+
+.col3 {
+	width: 30%;
+}
+
+.col4 {
+	width: 40%;
+}
+
+.col5 {
+	width: 50%;
+}
+
+.col6 {
+	width: 60%;
+}
+
+.col7 {
+	width: 70%;
+}
+
+.col8 {
+	width: 80%;
+}
+
+.col9 {
+	width: 90%;
+}
+
+.col10 {
+	width: 100%;
+}
+
+.row {
+	margin: 0 -15px;
+	overflow: auto;
+}
+=======
+>>>>>>> 80f26843cb3088b8800daa6900e750a50153f1e4

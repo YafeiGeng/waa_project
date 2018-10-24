@@ -15,6 +15,7 @@ public class PerformanceMonitorInterceptor implements HandlerInterceptor {
 	ThreadLocal<StopWatch> stopWatchLocal = new ThreadLocal<StopWatch>();
 	Logger logger = Logger.getLogger(this.getClass());
 
+	@Override
 	public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
 		StopWatch stopWatch = new StopWatch(handler.toString());
 		stopWatch.start(handler.toString());
@@ -25,10 +26,12 @@ public class PerformanceMonitorInterceptor implements HandlerInterceptor {
 		return true;
 	}
 
+	@Override
 	public void postHandle(HttpServletRequest arg0, HttpServletResponse response, Object handler, ModelAndView modelAndView) throws Exception {
 		logger.info("Request processing ended on " + getCurrentTime());
 	}
 
+	@Override
 	public void afterCompletion(HttpServletRequest request,	HttpServletResponse response, Object handler, Exception exception) throws Exception {
 		StopWatch stopWatch = stopWatchLocal.get();
 		stopWatch.stop();

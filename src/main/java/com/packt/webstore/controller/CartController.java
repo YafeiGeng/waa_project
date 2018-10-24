@@ -10,9 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.packt.webstore.domain.Cart;
-import com.packt.webstore.domain.Movie;
 import com.packt.webstore.service.CartService;
-import com.packt.webstore.service.MovieService;
 
 
 @Controller

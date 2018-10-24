@@ -1,8 +1,6 @@
 package com.packt.webstore.repository;
 
 import java.util.List;
-import java.util.Set;
-
 import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
