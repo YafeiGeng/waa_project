@@ -34,4 +34,9 @@
 		<put-attribute name="body"
 			value="/WEB-INF/views/addMovie.jsp" />
 	</definition>
+	<definition name="buyTicket" extends="baseLayout">
+		<put-attribute name="title" value="Movie" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/addMovie.jsp" />
+	</definition>
 </tiles-definitions>

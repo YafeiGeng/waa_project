@@ -17,32 +17,6 @@ resource
 </style>
 </head>
 <body>
-	<div class="header">
-		<ul class="nav nav-pills pull-right">
-			<h4>
-				<c:if test="${not empty sessionScope.currentUser}">
-					<a style="margin-right: 20px; color: #FFFFFF"
-						href="<spring:url value='/movies/add' />"> Add new movie </a>
-				</c:if>
-
-				<c:if test="${empty sessionScope.currentUser}">
-					<a style="margin-right: 20px; color: #FFFFFF"
-						href="<spring:url value='/login' />"> Login </a>
-				</c:if>
-				<c:if test="${not empty sessionScope.currentUser}">
-					<a style="margin-right: 20px; color: #FFFFFF"
-						href="<spring:url value='/logout' />"> Logout </a>
-
-				</c:if>
-				<div class="pull-right" style="padding-right: 50px">
-					<li style="float: right"><a href="?language=mn_MN"
-						style="color: white">/ Mongolian </a></li>
-					<li style="float: right"><a href="?language=en_US"
-						style="color: white">English</a></li>
-				</div>
-			</h4>
-		</ul>
-	</div>
 	<section>
 		<div class="jumbotron container-fluid header-full"
 			style="background-color: rgb(29, 29, 29); background-image: -webkit-linear-gradient(left, rgb(29, 29, 29) 0%, rgb(183, 21, 64) 25%, rgb(26, 188, 156) 75%, rgb(29, 29, 29) 100%); box-shadow: black 10px 10px 50px;">

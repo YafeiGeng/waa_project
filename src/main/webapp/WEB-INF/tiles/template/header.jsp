@@ -4,34 +4,33 @@
 <%@ page session="true"%>
 <header>
 	<ul>
-		<li style="float: right"><a href="?language=mn_MN">Mongolia</a></li>
-		<li style="float: right"><a href="?language=en_US">English</a></li>
-		<li><a href="<c:url value="/"/>"><spring:message
-					code="menu.home" text="Home" /></a></li>
-		<c:choose>
-			<c:when test="${sessionScope.currentUser != null}">
-				<li><a> <span> Welcome
-							${sessionScope.currentUser.firstName}</span></a></li>
-				<li><a href="<c:url value="/movies/add"/>"><spring:message
-							code="movie.add" text="Add movie" /></a></li>
-				<li><a href="<c:url value="/movies/"/>"><spring:message
-							code="movie.list" text="movie list" /></a></li>
+		<div class="header">
+			<ul class="nav nav-pills pull-right">
 
-				<li>
-					<form method="get" action="<c:url value="/logout"/>">
-						<button id="logout"
-							style="height: 46px; border: 1px solid #ccc; box-sizing: border-box; background: red; font-weight: bold; color: #fff;">
-							<spring:message code="menu.logout" text="Log Out" />
-						</button>
-					</form>
-				</li>
-			</c:when>
-			<c:otherwise>
-				<li><a href="<c:url value="/movies/"/>"><spring:message
-							code="movie.list" text="movie list" /></a></li>
-				<li><a href="/login"><spring:message code="menu.login"
-							text="Log In" /></a></li>
-			</c:otherwise>
-		</c:choose>
+
+				<h4>
+					<c:if test="${not empty sessionScope.currentUser}">
+						<a style="margin-right: 20px; color: #FFFFFF"
+							href="<spring:url value='/movies/add' />"> Add new movie </a>
+					</c:if>
+
+					<c:if test="${empty sessionScope.currentUser}">
+						<a style="margin-right: 20px; color: #FFFFFF"
+							href="<spring:url value='/login' />"> Login </a>
+					</c:if>
+					<c:if test="${not empty sessionScope.currentUser}">
+						<a style="margin-right: 20px; color: #FFFFFF"
+							href="<spring:url value='/logout' />"> Logout </a>
+
+					</c:if>
+					<div class="pull-right" style="padding-right: 50px">
+						<li style="float: right"><a href="?language=mn_MN"
+							style="color: white">/ Mongolian </a></li>
+						<li style="float: right"><a href="?language=en_US"
+							style="color: white">English</a></li>
+					</div>
+				</h4>
+			</ul>
+		</div>
 	</ul>
 </header>
