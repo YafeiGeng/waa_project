@@ -18,38 +18,39 @@
 
 				<form:form modelAttribute="reservation" class="form-horizontal"
 					enctype="multipart/form-data">
-					<fieldset>
+					<fieldset style="width: 50%; display: inline; float: inline-start;">
 						<form:errors path="*" cssClass="alert alert-danger" element="div" />
 						<h3>Movie: ${movie.movieName}</h3>
 						<div class="form-group">
-							<label class="control-label col-lg-2" for="time"><spring:message
-									code="addMovie.form.time.label" text="Time" /></label>
-							<div class="col-lg-10">
+							<label class="control-label col-lg-5" for="time"><spring:message
+									code="ticket.time" text="Time" /></label>
+							<div class="col-lg-5">
 								<div class="form:input-prepend">
-									<form:input id="time" path="time" type="text"
-										class="form:input-large" />
+									<form:select path="time">s
+										<form:option value="-" label="--Select Time" />
+										<form:options items="${times}" value="key" label="value" />
+									</form:select>
 									<form:errors path="time" cssClass="text-danger" />
 								</div>
 							</div>
 						</div>
 
 						<div class="form-group">
-							<label class="control-label col-lg-2" for="numberOfTickets"><spring:message
-									code="addMovie.form.price.label" /></label>
-							<div class="col-lg-10">
+							<label class="control-label col-lg-5" for="numberOfTickets"><spring:message
+									code="ticket.number" /></label>
+							<div class="col-lg-5">
 								<div class="form:input-prepend">
 									<form:input id="numberOfTickets" path="numberOfTickets"
-										type="number" class="form:input-large" />
+										type="number" class="form:input-small" />
 									<form:errors path="numberOfTickets" cssClass="text-danger" />
 								</div>
 							</div>
 						</div>
 
-
 						<div class="form-group">
-							<label class="control-label col-lg-2" for="price"><spring:message
-									code="addMovie.form.price.label" /></label>
-							<div class="col-lg-10">
+							<label class="control-label col-lg-5" for="price"><spring:message
+									code="ticket.price" /></label>
+							<div class="col-lg-5">
 								<div class="form:input-prepend">
 									<form:input id="price" path="price" type="text"
 										class="form:input-large" />
@@ -57,58 +58,79 @@
 								</div>
 							</div>
 						</div>
+					</fieldset>
+					<div class="context"
+						style="width: 50%; display: inline; float: inline-end; text-align: center;">
 
-						<div class="context">
+						<div class="screen">Central Screen</div>
 
-							<div class="screen">Central Screen</div>
+						<div class="row">
+							<input type="checkbox" class="seat" /> <input type="checkbox"
+								class="seat" /> <input type="checkbox" class="seat" /> <input
+								type="checkbox" class="seat" /> <input type="checkbox"
+								class="seat" /> <input type="checkbox" class="seat" /> <input
+								type="checkbox" class="seat" /> <input type="checkbox"
+								class="seat" /> <input type="checkbox" class="seat" />
+						</div>
+						<div class="row">
+							<input type="checkbox" class="seat" /> <input type="checkbox"
+								class="seat" /> <input type="checkbox" class="seat" /> <input
+								type="checkbox" class="seat" /> <input type="checkbox"
+								class="seat" /> <input type="checkbox" class="seat" /> <input
+								type="checkbox" class="seat" /> <input type="checkbox"
+								class="seat" /> <input type="checkbox" class="seat" />
+						</div>
+						<div class="row">
+							<input type="checkbox" class="seat" /> <input type="checkbox"
+								class="seat" /> <input type="checkbox" class="seat" /> <input
+								type="checkbox" class="seat" /> <input type="checkbox"
+								class="seat" /> <input type="checkbox" class="seat" /> <input
+								type="checkbox" class="seat" /> <input type="checkbox"
+								class="seat" /> <input type="checkbox" class="seat" />
+						</div>
+						<div class="row">
+							<input type="checkbox" class="seat" /> <input type="checkbox"
+								class="seat" /> <input type="checkbox" class="seat" /> <input
+								type="checkbox" class="seat" /> <input type="checkbox"
+								class="seat" /> <input type="checkbox" class="seat" /> <input
+								type="checkbox" class="seat" /> <input type="checkbox"
+								class="seat" /> <input type="checkbox" class="seat" />
+						</div>
+					</div>
+					<fieldset style="clear: left">
+						<h3>Customer information</h3>
 
-							<div class="row">
-								<input type="checkbox" class="seat" /> <input type="checkbox"
-									class="seat" /> <input type="checkbox" class="seat" /> <input
-									type="checkbox" class="seat" /> <input type="checkbox"
-									class="seat" /> <input type="checkbox" class="seat" /> <input
-									type="checkbox" class="seat" /> <input type="checkbox"
-									class="seat" /> <input type="checkbox" class="seat" />
-							</div>
-							<div class="row">
-								<input type="checkbox" class="seat" /> <input type="checkbox"
-									class="seat" /> <input type="checkbox" class="seat" /> <input
-									type="checkbox" class="seat" /> <input type="checkbox"
-									class="seat" /> <input type="checkbox" class="seat" /> <input
-									type="checkbox" class="seat" /> <input type="checkbox"
-									class="seat" /> <input type="checkbox" class="seat" />
-							</div>
-							<div class="row">
-								<input type="checkbox" class="seat" /> <input type="checkbox"
-									class="seat" /> <input type="checkbox" class="seat" /> <input
-									type="checkbox" class="seat" /> <input type="checkbox"
-									class="seat" /> <input type="checkbox" class="seat" /> <input
-									type="checkbox" class="seat" /> <input type="checkbox"
-									class="seat" /> <input type="checkbox" class="seat" />
-							</div>
-							<div class="row">
-								<input type="checkbox" class="seat" /> <input type="checkbox"
-									class="seat" /> <input type="checkbox" class="seat" /> <input
-									type="checkbox" class="seat" /> <input type="checkbox"
-									class="seat" /> <input type="checkbox" class="seat" /> <input
-									type="checkbox" class="seat" /> <input type="checkbox"
-									class="seat" /> <input type="checkbox" class="seat" />
+						<div class="form-group">
+							<label class="control-label col-lg-2" for="reserverName"><spring:message
+									code="ticket.form.customer.name" /></label>
+							<div class="col-lg-10">
+								<div class="form:input-prepend">
+									<form:input type="text" id="reserverName" path="reserverName"
+										placeholder="Enter your name" class="form:input-large" />
+									<form:errors path="reserverName" cssClass="text-danger" />
+								</div>
 							</div>
 						</div>
-						<div class="confirm-info">
-							<h3>Customer information</h3>
-							<div class="room">
-								Name: <label for="reserverName"><form:input type="text"
-										id="reserverName" path="reserverName"
-										placeholder="Enter your name" /></label>
+						<div class="form-group">
+							<label class="control-label col-lg-2" for="email"><spring:message
+									code="ticket.form.customer.email" /></label>
+							<div class="col-lg-10">
+								<div class="form:input-prepend">
+									<form:input id="email" path="email" type="text"
+										placeholder="xxxxx@gmail.com" class="form:input-large" />
+									<form:errors path="email" cssClass="text-danger" />
+								</div>
 							</div>
-							<div class="room">
-								Email: <label for="email"><form:input type="text"
-										id="email" path="email" placeholder="xxxxx@gmail.com" /></label>
-							</div>
-							<div class="room">
-								Phone: <label for="phone"><form:input type="text"
-										id="phone" path="phone" placeholder="xxx-xxx-xxxx" /></label>
+						</div>
+						<div class="form-group">
+							<label class="control-label col-lg-2" for="phone"><spring:message
+									code="ticket.form.customer.phone" /></label>
+							<div class="col-lg-10">
+								<div class="form:input-prepend">
+									<form:input id="phone" path="phone" type="text"
+										placeholder="xxx-xxx-xxxx" class="form:input-large" />
+									<form:errors path="phone" cssClass="text-danger" />
+								</div>
 							</div>
 						</div>
 
@@ -118,10 +140,7 @@
 									value="Confirm" />
 							</div>
 						</div>
-
 					</fieldset>
-
-
 				</form:form>
 			</div>
 		</div>
