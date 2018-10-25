@@ -13,8 +13,8 @@
  
     <context:property-placeholder location="classpath:application.properties" />
     
-   	<context:component-scan base-package="com.packt.webstore.service" />
-   	<context:component-scan base-package="com.packt.webstore.repository" />
+   	<context:component-scan base-package="com.waa.ticketing.service" />
+   	<context:component-scan base-package="com.waa.ticketing.repository" />
     
    <!-- Scan for  transaction-based resources -->
    <tx:annotation-driven transaction-manager="transactionManager"/>
@@ -23,7 +23,7 @@
  
  <!-- The jpa:repositories scans for all interfaces that extend Spring Data Repository and 
       creates implementations for use at runtime.  -->
- <jpa:repositories base-package="com.packt.webstore.repository" />
+ <jpa:repositories base-package="com.waa.ticketing.repository" />
  
  
  <!-- Creates a JPA EntityManagerFactory according to JPA's standard container bootstrap contract.
@@ -31,7 +31,7 @@
   -->
    <bean id="entityManagerFactory" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
       <property name="dataSource" ref="dataSource" />
-      <property name="packagesToScan" value="com.packt.webstore.domain" />
+      <property name="packagesToScan" value="com.waa.ticketing.domain" />
      
      <!--  provider-specific initialization,etc. -->
       <property name="jpaVendorAdapter">
