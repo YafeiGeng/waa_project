@@ -9,9 +9,7 @@ import com.waa.ticketing.domain.Reservation;
 public interface ReservationService {
 	
 	List<Reservation> getAllReservations();
-
-	//Reservation getReservationById(String reservationID);
-
+	
 	List<Reservation> getProductsByCategory(String category);
 
 	Set<Reservation> getProductsByFilter(Map<String, List<String>> filterParams);
@@ -19,8 +17,4 @@ public interface ReservationService {
 	void addReservation(Reservation reservation);
 
 	Reservation get(long id);
-
-	//public Reservation getAddReservation(String desc);
-
-	//List<Reservation> getReservationsByDescOrder();
 }

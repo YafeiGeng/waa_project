@@ -23,23 +23,19 @@ public class ReservationServiceImpl implements ReservationService {
 	public List<Reservation> getAllReservations() {
 		return reservationRepository.getAllReservations();
 	}
-/*
-	@Override
-	public Reservation getReservationById(String ReservationID) {
-		return reservationRepository.getReservationByReservationId(ReservationID);
-	}
-*/
+
+
 	@Override
 	public List<Reservation> getProductsByCategory(String category) {
 		return null;
-//		ReservationRepository.getReservationsByCategory(category);
+
 	}
 
 	@Override
 	public Set<Reservation> getProductsByFilter(Map<String, List<String>> filterParams) {
 		List<String> params = filterParams.get("brand");
 		return null;
-//		ReservationRepository.getProductsByFilter(params);
+
 	}
 
 	@Override
@@ -52,21 +48,5 @@ public class ReservationServiceImpl implements ReservationService {
 		return reservationRepository.findOne(productID);
 	}
 
-	/*@Override
-	public List<Reservation> getReservationsByDescOrder() {
-		return null;
-//		ReservationRepository.getProductsByDescOrder();
-	}*/
-/*
-	// Cache in play because fetches are in same session
-	@Override
-	public Reservation getAddReservation(String desc) {
-		Reservation p = getReservationById("P1235");
-		p = get(p.getId());
-
-		addReservation(p);
-		return p;
-
-	}*/
 
 }
