@@ -10,18 +10,29 @@
 <title>Products</title>
 </head>
 <body>
-	<section>
-		<div class="jumbotron">
-			<div class="container">
-				<h1>Movies</h1>
-				<p>Add movies</p>
-			</div>
-			<div class="pull-right" style="padding-right: 50px">
-				<li style="float: right"><a href="?language=mn_MN">Mongolia</a></li>
-				<li style="float: right"><a href="?language=en_US">English</a></li>
-			</div>
+	<div class="header">
+		<ul class="nav nav-pills pull-right">
+			<h4>
+				<c:if test="${not empty sessionScope.currentUser}">
+					<a style="margin-right: 20px; color: #FFFFFF"
+						href="<spring:url value='/logout' />"> Logout </a>
 
-		</div>
+				</c:if>
+				<div class="pull-right" style="padding-right: 50px">
+					<li style="float: right"><a href="?language=mn_MN"
+						style="color: white">/ Mongolian </a></li>
+					<li style="float: right"><a href="?language=en_US"
+						style="color: white">English</a></li>
+				</div>
+			</h4>
+		</ul>
+	</div>
+	<section>
+		<div class="jumbotron"
+			style="background-image: url(https://wallpapercave.com/wp/zWgAVWZ.jpg); height: 250px;">
+			<div class="container">
+				<h1>Add movie</h1>
+			</div>
 	</section>
 	<section class="container">
 		<form:form modelAttribute="newMovie" class="form-horizontal"
@@ -102,13 +113,11 @@
 							code="addMovie.form.movieImage.label" /></label>
 					<div class="col-lg-10">
 						<form:input id="movieImage" path="movieImage" type="file"
-							code="addMovie.form.movieTime.label" /></label>
-							class="form:input-large" />
+							code="addMovie.form.movieTime.label" />
 					</div>
 				</div>
 
-						<input type="submit" id="btnAdd" class="btn btn-primary"
-							value="Add" />
+				<input type="submit" id="btnAdd" class="btn btn-primary" value="Add" />
 
 			</fieldset>
 		</form:form>

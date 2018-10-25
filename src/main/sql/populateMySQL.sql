@@ -10,3 +10,5 @@ INSERT INTO `MOVIE` VALUES (NULL,'An animated adventure for all ages, with origi
 INSERT INTO `TIME` VALUES(1,"15:00");
 INSERT INTO `TIME` VALUES(1,"17:00");
 INSERT INTO `TIME` VALUES(1,"19:00");
+
+INSERT INTO `USER` VALUES (NULL, 'guamaral.v@gmail.com', '123', 'admin');

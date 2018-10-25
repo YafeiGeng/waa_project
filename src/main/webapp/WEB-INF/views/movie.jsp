@@ -17,12 +17,38 @@ resource
 </style>
 </head>
 <body>
+	<div class="header">
+		<ul class="nav nav-pills pull-right">
+			<h4>
+				<c:if test="${not empty sessionScope.currentUser}">
+					<a style="margin-right: 20px; color: #FFFFFF"
+						href="<spring:url value='/movies/add' />"> Add new movie </a>
+				</c:if>
+
+				<c:if test="${empty sessionScope.currentUser}">
+					<a style="margin-right: 20px; color: #FFFFFF"
+						href="<spring:url value='/login' />"> Login </a>
+				</c:if>
+				<c:if test="${not empty sessionScope.currentUser}">
+					<a style="margin-right: 20px; color: #FFFFFF"
+						href="<spring:url value='/logout' />"> Logout </a>
+
+				</c:if>
+				<div class="pull-right" style="padding-right: 50px">
+					<li style="float: right"><a href="?language=mn_MN"
+						style="color: white">/ Mongolian </a></li>
+					<li style="float: right"><a href="?language=en_US"
+						style="color: white">English</a></li>
+				</div>
+			</h4>
+		</ul>
+	</div>
 	<section>
-		<div class="jumbotron">
+		<div class="jumbotron"
+			style="background-image: url(https://wallpapercave.com/wp/zWgAVWZ.jpg); height: 250px;">
 			<div class="container">
-				<h1>Movie</h1>
+				<h1>Movie detail</h1>
 			</div>
-		</div>
 	</section>
 	<section class="container">
 		<div class="row">
