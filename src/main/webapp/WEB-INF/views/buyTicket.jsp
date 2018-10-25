@@ -8,20 +8,34 @@
 <link rel="stylesheet"
 	href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">	
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<title>Buy ticket</title>
+<title>Buy ticket</title><style type="text/css">
+@import
+url(
+"<c:url value="
+/
+resource
+/css/movie.css"/>");
+</style>
 </head>
 <body>
-	<h1>Ticket information</h1>
 	<section>
-		<div class="jumbotron">
-
-			<div class="container" style="font-size: 16px;">
-
-				<form:form modelAttribute="reservation" class="form-horizontal" id="ticketInfo"
+		<div class="jumbotron container-fluid header-full"
+			style="background-color: rgb(29, 29, 29); background-image: -webkit-linear-gradient(left, rgb(29, 29, 29) 0%, rgb(183, 21, 64) 25%, rgb(26, 188, 156) 75%, rgb(29, 29, 29) 100%); box-shadow: black 10px 10px 50px;">
+			<div class="container" style="color: white;text-align: center;">
+				<h1>Ticket information</h1>
+			</div>
+		</div>
+	</section>
+	<section class="container">		
+		<div class="row">
+			<div class="movie-description col-md-9">				
+				<span></span>
+				<div class="movie-main-desc">
+					<form:form modelAttribute="reservation" class="form-horizontal" id="ticketInfo"
 					enctype="multipart/form-data">
 					<fieldset style="width: 50%; display: inline; float: inline-start;">
 						<form:errors path="*" cssClass="alert alert-danger" element="div" />
-						<h3>Movie: ${movie.movieName}</h3>
+						<h3 style="color:blue;">Movie: ${movie.movieName}</h3>
 						<div class="form-group">
 							<label class="control-label col-lg-5" for="time"><spring:message
 									code="ticket.time" text="Time" /></label>
@@ -100,7 +114,7 @@
 					</div>
 					
 					<fieldset style="clear: left">
-						<h3>Customer information</h3>
+						<h3 style="color:blue;">Customer information</h3>
 
 						<div class="form-group">
 							<label class="control-label col-lg-3" for="reserverName"><spring:message
@@ -143,12 +157,16 @@
 						</div>
 					</fieldset>
 				</form:form>
+				</div>
 			</div>
-			<div id="formInput"></div> 
-			<div id="errors"></div> 
+			<div class="col-md-3">
+				<div id="formInput"></div> 
+				<div id="errors"></div> 
+			</div>
 		</div>
+		<br /> <br /> <br />
 	</section>
-<script>
+	<script>
 function calculate() {	
     var x = document.getElementById("numberOfTickets").value;    
     document.getElementById("price").value = "$" +  parseInt(x)*8 ;

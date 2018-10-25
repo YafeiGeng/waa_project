@@ -10,8 +10,9 @@
 </head>
 <body>
 	<section>
-		<div class="jumbotron">
-			<div class="container">
+		<div class="jumbotron container-fluid header-full"
+			style="background-color: rgb(29, 29, 29); background-image: -webkit-linear-gradient(left, rgb(29, 29, 29) 0%, rgb(183, 21, 64) 25%, rgb(26, 188, 156) 75%, rgb(29, 29, 29) 100%); box-shadow: black 10px 10px 50px;">
+			<div class="container" style="color: white;">
 				<h1>Movies</h1>
 				<p>Movie list</p>
 			</div>
@@ -25,7 +26,7 @@
 				class="glyphicon-info-sign glyphicon" /></span> Add
 			</a>
 		</div> -->
-		<br/>
+		<br />
 		<div class="row">
 			<c:forEach items="${movies}" var="movie">
 				<div class="col-sm-6 col-md-3" style="padding-bottom: 15px">
