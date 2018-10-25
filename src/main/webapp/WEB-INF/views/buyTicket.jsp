@@ -51,7 +51,8 @@ resource
 						</div>
 
 						<div class="form-group">
-							<label class="control-label col-lg-5" for="numberOfTickets"><spring:message
+							<label class="control-label col-lg-5" for="numberOfTickets">
+							<spring:message
 									code="ticket.number" /></label>
 							<div class="col-lg-5">
 								<div class="input-group-prepend">
