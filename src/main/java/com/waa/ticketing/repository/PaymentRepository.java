@@ -15,8 +15,5 @@ public interface PaymentRepository extends CrudRepository<Payment, Long>, JpaSpe
 	// findAll comes with repository
 	@Query("SELECT p FROM PAYMENT p")
 	public List<Payment> getAllpayments();
-/*
-	@Query("SELECT p FROM PAYMENT p WHERE PAYMENTID = :paymentId")
-	Payment getpaymentById(@Param("paymentId") String key);
-*/
+
 }
