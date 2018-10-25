@@ -68,7 +68,7 @@
 											href=" <spring:url value="/movies/movie?id=${movie.movieId}" /> ">
 											${movie.movieName} </a>
 									</h3>
-									<p>${movie.runTime}minutes</p>
+									<p>${movie.runTime} minutes</p>
 									<p>${movie.genre}</p>
 								</div></li>
 
