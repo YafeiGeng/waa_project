@@ -7,8 +7,4 @@ INSERT INTO `MOVIE` VALUES (NULL,'An animated adventure for all ages, with origi
 INSERT INTO `MOVIE` VALUES (NULL,'An animated adventure for all ages, with original music and an all-star cast', 'John3', 'Action3','P1238','SmallFoot3', 8, 100);
 
 
-INSERT INTO `TIME` VALUES(1,"15:00");
-INSERT INTO `TIME` VALUES(1,"17:00");
-INSERT INTO `TIME` VALUES(1,"19:00");
-
 INSERT INTO `USER` VALUES (NULL, 'guamaral.v@gmail.com', '123', 'admin');

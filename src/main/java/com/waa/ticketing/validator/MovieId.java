@@ -12,9 +12,9 @@ import javax.validation.Payload;
 
 @Target( { METHOD, FIELD, ANNOTATION_TYPE })
 @Retention(RUNTIME)
-@Constraint(validatedBy = ProductIdValidator.class)
+@Constraint(validatedBy = MovieIdValidator.class)
 @Documented
-public @interface ProductId {
+public @interface MovieId {
 	   String message() default "{com.waa.ticketing.validator.ProductId.message}";
 
 	    Class<?>[] groups() default {};

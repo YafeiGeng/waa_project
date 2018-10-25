@@ -16,7 +16,7 @@
 							code="movie.add" text="Add movie" /></a></li>
 				<li><a href="<c:url value="/movies/"/>"><spring:message
 							code="movie.list" text="movie list" /></a></li>
-			
+
 				<li>
 					<form method="get" action="<c:url value="/logout"/>">
 						<button id="logout"

@@ -36,11 +36,13 @@
 		</ul>
 	</div>
 	<section>
-		<div class="jumbotron"
-			style="background-image: url(https://wallpapercave.com/wp/zWgAVWZ.jpg); height: 250px;">
-			<div class="container">
-				<h1>Movie list</h1>
+		<div class="jumbotron container-fluid header-full"
+			style="background-color: rgb(29, 29, 29); background-image: -webkit-linear-gradient(left, rgb(29, 29, 29) 0%, rgb(183, 21, 64) 25%, rgb(26, 188, 156) 75%, rgb(29, 29, 29) 100%); box-shadow: black 10px 10px 50px;">
+			<div class="container" style="color: white;">
+				<h1>Movies</h1>
+				
 			</div>
+		</div>
 	</section>
 
 	<section class="container">
@@ -56,7 +58,7 @@
 				<div class="col-sm-6 col-md-3" style="padding-bottom: 15px">
 					<div class="movies">
 						<ul class="list-movies clearfix">
-							<li><img
+							<li><img class="img-thumbnail border border-primary" 
 								src="<c:url value="/resource/images/${movie.movieId}.png"></c:url>"
 								alt="image" style="width: 100%" />
 

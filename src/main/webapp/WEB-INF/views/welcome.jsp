@@ -35,10 +35,9 @@
 			</h4>
 		</ul>
 	</div>
-	<section>
-		<div class="jumbotron"
-			style="background-image: url(https://wallpapercave.com/wp/zWgAVWZ.jpg); height: 250px;">
-			<div class="container">
+<section><div class="jumbotron container-fluid header-full"
+			style="background-color: rgb(29, 29, 29); background-image: -webkit-linear-gradient(left, rgb(29, 29, 29) 0%, rgb(183, 21, 64) 25%, rgb(26, 188, 156) 75%, rgb(29, 29, 29) 100%); box-shadow: black 10px 10px 50px;">
+	<div class="container" style="color:white;">
 				<h1>Ottumwa 8 online cinema</h1>
 				<p>Recently added new Movies are here.</p>
 			</div>
@@ -46,19 +45,19 @@
 			<div class="container">
 				<h3>
 					<a href="<spring:url value='/movies' />" class="btn btn-default">
-						<span class="glyphicon-hand-left glyphicon"></span> Go To Movies
+			<span class="glyphicon glyphicon-circle-arrow-left"></span> Go To Movies
 					</a>
 				</h3>
 			</div>
 			<div class="row" style="margin-top: 5px">
 
 				<div class="col-md-6">
-					<img src="<c:url value="/resource/images/4.png"></c:url>"
+		<img  class="img-thumbnail" src="<c:url value="/resource/images/4.png"></c:url>"
 						alt="image" style="width: 100%; height: 500px;" />
 				</div>
 
 				<div class="col-md-6">
-					<img src="<c:url value="/resource/images/5.png"></c:url>"
+		<img  class="img-thumbnail" src="<c:url value="/resource/images/5.png"></c:url>"
 						alt="image" style="width: 100%; height: 500px;" />
 				</div>
 			</div>
