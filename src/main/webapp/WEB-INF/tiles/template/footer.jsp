@@ -1,1 +1,1 @@
-<p>&copy; triple team</p>
+<div align = "center">&copy; triple team</div>

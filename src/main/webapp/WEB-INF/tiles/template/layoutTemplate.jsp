@@ -19,53 +19,6 @@
 <title><tiles:insertAttribute name="title" /></title>
 <meta name="_csrf" content="${_csrf.token}" />
 <meta name="_csrf_header" content="${_csrf.headerName}" />
-<style>
-body {
-	margin: 0 auto;
-}
-
-footer {
-	position: fixed;
-	left: 0;
-	bottom: 0;
-	width: 100%;
-	background-color: #333;
-	color: white;
-	text-align: center;
-}
-
-/* form CSS */
-.form {
-	background: #f2f2f2;
-	border-radius: 5px;
-	padding: 20px;
-	width: 400px;
-	margin: 0 auto;
-	font-family: "Times New Roman", sans-serif;
-	font-size: 16pt;
-	margin-top: 100px;
-}
-
-.form input, select {
-	width: 100%;
-	padding: 10px;
-	margin: 10px 0;
-	display: inline-block;
-	border: 1px solid #ccc;
-	box-sizing: border-box;
-	border-radius: 4px;
-}
-
-.form input[type="submit"] {
-	background-color: #4CAF50;
-	color: #fff;
-}
-
-.form input[type="submit"]:hover {
-	border: 1px solid #fff;
-	opacity: 0.75;
-}
-</style>
 </head>
 
 <body>
