@@ -9,7 +9,6 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.waa.ticketing.domain.Movie;
-import com.waa.ticketing.domain.query.ProductSpecification;
 import com.waa.ticketing.repository.MovieRepository;
 import com.waa.ticketing.service.MovieService;
 
@@ -79,9 +78,10 @@ public class MovieServiceImpl implements MovieService {
 	@Override
 	public List<Movie> findBySpec(Movie product) {
 
-		ProductSpecification productSpecification = new ProductSpecification(product);
+	//ProductSpecification productSpecification = new ProductSpecification(product);
 
-		return movieRepository.findAll(productSpecification);
+	//	return movieRepository.findAll(productSpecification);
+		return null;
 	}
 
 }

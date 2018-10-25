@@ -6,7 +6,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <link rel="stylesheet"
 	href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">	
-<title>Products</title>
+<title>Movie</title>
 <style type="text/css">
 @import
 url(
@@ -25,11 +25,11 @@ resource
 			</div>
 		</div>
 	</section>
-	<section class="container">
+	<section class="container" style="text-align: center;">
 		<div class="row">
 			<img
 				src="<c:url value="/resource/images/${movie.movieId}.png"></c:url>"
-				alt="image" style="width: 100%; height: 75%" />
+				alt="image" style="width: 850px; height: 350px" />
 		</div>
 		<br />
 		<div class="row">

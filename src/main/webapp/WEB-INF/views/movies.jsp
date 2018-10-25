@@ -32,7 +32,7 @@
 				<div class="col-sm-6 col-md-3" style="padding-bottom: 15px">
 					<div class="movies">
 						<ul class="list-movies clearfix">
-							<li><img
+							<li><img class="img-thumbnail border border-primary" 
 								src="<c:url value="/resource/images/${movie.movieId}.png"></c:url>"
 								alt="image" style="width: 100%" />
 
