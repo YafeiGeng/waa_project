@@ -1,6 +1,0 @@
-package com.waa.ticketing.service;
-
-public interface OrderService {
-	
-	void processOrder(String  productId, long quantity);
-}
