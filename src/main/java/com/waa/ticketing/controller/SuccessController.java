@@ -1,6 +1,7 @@
 package com.waa.ticketing.controller;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -15,13 +16,16 @@ public class SuccessController {
 	
 
 	@RequestMapping(value="/success", method = RequestMethod.GET)
-	public String display(Reservation reservation) {
+	public String display(Reservation reservation, Model model) {
+		model.addAttribute("greeting", "Thank you!");
+		model.addAttribute("tagline", "Your reservation is ordered successfully.");
 		
 		return "success";
 	}
 		
 	@RequestMapping(value = "/success", method = RequestMethod.POST)	
-	public @ResponseBody Reservation add(@RequestBody  Reservation reservation, BindingResult result)  {		
+	public @ResponseBody Reservation add(@RequestBody  Reservation reservation, BindingResult result)  {
+		System.out.println("body>>>>"+reservation);
 		return reservation;
 	}
 }
