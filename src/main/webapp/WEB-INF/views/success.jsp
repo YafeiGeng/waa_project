@@ -13,7 +13,9 @@
 			<div class="container">
 				<h2> ${greeting} </h2>
 				<p> ${tagline} </p>
-			</div>	 
+			</div>	
+			<div id="formInput"></div> 
+			<div id="errors"></div> 
 		</div>	
 	</section>
 	
