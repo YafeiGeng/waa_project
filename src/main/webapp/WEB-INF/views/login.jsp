@@ -10,10 +10,9 @@
 </head>
 <body>
 	<section>
-		<div class="jumbotron">
+		<div class="jumbotron" style = "background-image: url(https://wallpapercave.com/wp/zWgAVWZ.jpg);  height: 200px;">
 			<div class="container">
-				<h1>Products</h1>
-				<p>Add products</p>
+				<h1>Admin page</h1>
 			</div>
 		</div>
 	</section>
@@ -30,13 +29,13 @@
 						<spring:message code="AbstractUserDetailsAuthenticationProvider.badCredentials"/><br />
 					</div>
 				</c:if>
-			    	<form action="<c:url value="/j_spring_security_check"></c:url>" method="post">
+			    	<form action="login" method="post">
                     <fieldset>
 			    	  	<div class="form-group">
-			    		    <input class="form-control" placeholder="User Name" name='j_username' type="text">
+			    		    <input class="form-control" placeholder="User Name" name='username' type="text">
 			    		</div>
 			    		<div class="form-group">
-			    			<input class="form-control" placeholder="Password" name='j_password'  type="password" value="">
+			    			<input class="form-control" placeholder="Password" name='password'  type="password" value="">
 			    		</div>
 			    		<input class="btn btn-lg btn-success btn-block" type="submit" value="Login">
 			    	</fieldset>

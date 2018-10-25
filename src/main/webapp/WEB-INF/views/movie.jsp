@@ -61,14 +61,15 @@ resource
 							<tr>
 								<td><strong><spring:message
 											code="addMovie.form.price.label" /></strong></td>
-								<td>${movie.price} USD</td>
+								<td>${movie.price}USD</td>
 							</tr>
 						</tbody>
 					</table>
 				</div>
 			</div>
 			<div class="col-md-6">
-				<span> <a href=" <spring:url value="/movie/ticket?movieid=${movie.movieId}" /> "
+				<span> <a
+					href=" <spring:url value="/movie/ticket?movieid=${movie.movieId}" /> "
 					class="btn btn-primary"> <span
 						class="glyphicon-info-sign glyphicon" /></span> Take a ticket
 				</a>

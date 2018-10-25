@@ -10,11 +10,10 @@ import com.waa.ticketing.domain.User;
 import com.waa.ticketing.repository.UserRepository;
 import com.waa.ticketing.service.UserService;
 
-
 @Service
 @Transactional
-public class UserServiceImpl implements UserService{
-	
+public class UserServiceImpl implements UserService {
+
 	@Autowired
 	private UserRepository userRepository;
 
@@ -22,50 +21,10 @@ public class UserServiceImpl implements UserService{
 	public List<User> getAllUsers() {
 		return userRepository.getAllUsers();
 	}
-/*
+
 	@Override
-	public User getUserById(String UserID) {
-		return userRepository.getUserById(UserID);
+	public User getUserByUserName(String userName) {
+		return userRepository.getUserByUserName(userName);
 	}
-
-	@Override
-	public List<User> getProductsByCategory(String category) {
-		return null;
-//		UserRepository.getUsersByCategory(category);
-	}
-
-	@Override
-	public Set<User> getProductsByFilter(Map<String, List<String>> filterParams) {
-		List<String> params = filterParams.get("brand");
-		return null;
-//		UserRepository.getProductsByFilter(params);
-	}
-
-	@Override
-	public void addUser(User product) {
-		userRepository.save(product);
-	}
-
-	@Override
-	public User get(long productID) {
-		return userRepository.findOne(productID);
-	}
-
-	@Override
-	public List<User> getUsersByDescOrder() {
-		return null;
-//		UserRepository.getProductsByDescOrder();
-	}
-
-	// Cache in play because fetches are in same session
-	@Override
-	public User getAddUser(String desc) {
-		User p = getUserById("P1235");
-		p = get(p.getId());
-
-		addUser(p);
-		return p;
-
-	}*/
 
 }
