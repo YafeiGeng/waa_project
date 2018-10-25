@@ -193,7 +193,7 @@ function reserve() {
 
 		error: function(jqXHR,  textStatus,  exception ){	
  			$('#errors').html("");
- 			$("#errors").append( '<H3 align="center"> Error(s)!! <H3>');     
+ 			$("#errors").append( '<H3 align="center"> Errors! <H3>');     
 		}	
 	});	
 }

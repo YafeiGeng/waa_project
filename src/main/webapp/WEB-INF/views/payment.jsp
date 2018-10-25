@@ -22,7 +22,7 @@
 	
 					 <div class="form-group">
 						<label class="control-label col-lg-2" for="cardName"><spring:message
-								code="addMovie.form.time.label" text="Card Time"/></label>
+								code="addMovie.form.time.label" text="Card Name"/></label>
 						<div class="col-lg-10">
 							<div class="form:input-prepend">
 								<form:input id="cardName" path="cardName" type="text"
@@ -30,31 +30,20 @@
 								<form:errors path="cardName" cssClass="text-danger" />
 							</div>
 						</div>
-					</div>	
-					
-				<%--	<div class="form-group">
-						<label class="control-label col-lg-2" for="numberOfTickets"><spring:message
-								code="addMovie.form.price.label" /></label>
-						<div class="col-lg-10">
-							<div class="form:input-prepend">
-								<form:input id="numberOfTickets" path="numberOfTickets" type="number"
-									class="form:input-large" />
-								<form:errors path="numberOfTickets" cssClass="text-danger" />
-							</div>
-						</div>
-					</div>						
+					</div>		
 					
 					<div class="form-group">
-						<label class="control-label col-lg-2" for="price"><spring:message
-								code="addMovie.form.price.label" /></label>
+						<label class="control-label col-lg-2" for="cardNumber"><spring:message
+								code="addMovie.form.time.label" text="Card Number"/></label>
 						<div class="col-lg-10">
 							<div class="form:input-prepend">
-								<form:input id="price" path="price" type="text"
+								<form:input id="cardNumber" path="cardNumber" type="text"
 									class="form:input-large" />
-								<form:errors path="price" cssClass="text-danger" />
+								<form:errors path="cardNumber" cssClass="text-danger" />
 							</div>
 						</div>
-					</div>	 --%>
+					</div>		
+					
 	
 					<div class="form-group">
 						<div class="col-lg-offset-2 col-lg-10">
